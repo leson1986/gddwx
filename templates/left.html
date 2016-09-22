@@ -1,0 +1,62 @@
+<table width="96%" border="0" align="center" cellpadding="0" cellspacing="0">
+	      <tr><td style="padding-left:1px;"><img src="images/sotop.gif" width="194" height="35"></td></tr>
+	      <tr><td align="center">
+		  <table width="94%" border="0" cellspacing="0" cellpadding="0">
+        <form id="form1" name="form1" method="post" action="search.php"><tr>
+          <td height="28" align="left">
+            <label>
+              <select name="Field">
+                <option value="1">Names</option>
+				<option value="2">Description</option>
+              </select>
+              </label>
+          
+          </td>
+        </tr>
+        <tr>
+          <td height="28" align="left">
+		  	 <select name="BigClassName" style="width:180px;">
+			 <{foreach from=$cat_tree name=ca item=cat}>
+                <option value="<{$cat.id}>"><{$cat.class_name_en}></option>
+				<{foreach name=r from=$cat.child item=catr}>
+				<option value="<{$catr.id}>">&nbsp;-<{$catr.class_name_en}></option>
+				<{/foreach}>
+			<{/foreach}>
+              </select></td>
+        </tr>
+        <tr>
+          <td height="28" align="left"><input name="Keyword" type="text" size="20" /></td>
+        </tr>
+        <tr>
+          <td height="28" align="center"><input type="submit" name="Submit" value="Search" /></td>
+        </tr></form>
+      </table>
+		  </td>
+	      </tr>
+          <tr>
+            <td align="center" style="padding-left:1px;"><img src="images/lineso.gif" width="194" height="35"></td>
+          </tr>
+          <tr>
+            <td height="20">
+              <div >
+			<!--<h3>Ʒչʾ</h3> -->
+
+				<ul class="sm1">
+				<{foreach name=c from=$cat_tree item=cat}>
+				
+					<li class="sm11"><a href="products.php?classid=<{$cat.id}>&menuid=3" class="left_menu2"><strong><{$cat.class_name_en}></strong></a></li>
+					<{foreach name=r from=$cat.child item=catr}>
+							<li class="sm22"><IMG src="images/arrow_6.gif" width=11 height="11">&nbsp;<a href="products.php?classid=<{$catr.id}>&menuid=3"><{$catr.class_name_en}></a></li>
+					<{/foreach}>
+					<{/foreach}>						
+									<!--<li class="sm3"><a href="333">33</a></li>-->
+									
+				</ul>
+				</div></td>
+          </tr>
+          <TR>
+            <TD 
+                            height=1 colspan="2" 
+                            background=images/naSzarym.gif><IMG height=1 src="images/1x1_pix.gif"  width=10></TD>
+          </TR>
+        </table>

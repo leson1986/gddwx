@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ margin:0 auto; padding:0; font:Arial, Helvetica, Verdana, Geneva, sans-serif; font-size:12px;}
+form,table,textarea,input{ margin:0; padding:0;font:normal 12px "",Arial,Verdana;white-space:normal; line-height:150%}
+img{ border:none}
+a:link,a:visited{text-decoration: none; color:#000000}
+a:hover,a:active{text-decoration: none; color:#FF6633}
+a.product{text-decoration: none;color: #026205; text-decoration:underline}
+a.product:hover,a.product:active{color:#1B80C6;}
+
+a.menu{text-decoration: none;color: #FFFFFF;}
+a.menu:hover,a.menu:active{color:#FFFFFF;}
+
+a.left_menu{text-decoration: none;color: #0E0449;}
+a.left_menu:hover,a.left_menu:active{color:#39ACFF;}
+
+a.left_menu2{text-decoration: none;color: #39ACFF;}
+a.left_menu2:hover,a.left_menu2:active{color:#0E0449;}
+
+a.news{text-decoration: none;color: #676769;}
+a.news:hover,a.news:active{color:#39ACFF;}
+
+a.buttom{text-decoration: none;color: #737373;}
+a.buttom:hover,a.buttom:active{color:#39ACFF;}
+
+a.top_new{text-decoration: none;color: #023F88;}
+a.top_new:hover,a.top_new:active{color:#39ACFF;}
+
+#page{ margin:0 auto; padding:0; width:988px;}
+#cl{ clear:both}
+
+#head{ margin:0 auto; padding:0; width:988px;}
+#head .head_l{ margin:0; padding:0; width:311px; height:58px; float:left;}
+#head .head_r{ margin:0; padding:0; width:677px; height:58px; background:url(../images/gan_04.jpg) no-repeat left; float:right;}
+
+#banner{ margin:0 auto; padding:0; width:988px;}
+#banner .banner_l{ margin:0; padding:0; width:311px; height:124px; float:left;}
+#banner .banner_r{ margin:0; padding:0; width:677px; height:124px; background:url(../images/gan_07.jpg) no-repeat left; float:right;}
+
+#ind_center{ margin:0 auto; padding:0; width:988px; background:url(../images/gan_09.jpg) repeat left;}
+#ind_center .left{ margin:0; padding:0; width:195px; float:left; background:url(../images/gan_09.jpg) repeat left;}
+#ind_center .right{ margin:0 auto; padding:0; width:792px; float:right; background:url(../images/gan_09_2.jpg) repeat left; text-align:center;}
+.right #notice{ margin:0 auto; padding:0; background:url(../images/notice.jpg) repeat left; width:785px; height:37px; text-align:left; }
+.right #notice p{ margin:0 auto; padding-top:15px; margin-left:138px}
+
+.right #gd_pro{ margin-left:20px; text-align:left; padding:6px !important;}
+.right #gd_pro_l{ margin-left:20px !important; margin-left:10px; margin-top:14px;  margin-bottom:10px; padding:0; text-align:left; float:left; }
+.right #gd_pro_l span{ margin:0; padding-left:10px;}
+.right #gd_pro_r{ margin-left:20px !important; margin-left:10px; margin-top:14px; margin-right:5px;  padding:0; text-align:left; float:right;}
+.right #line_1{ margin:0 auto; padding:0; width:785px; border-top:2px #CCC solid;}
+
+#ind_c_bot{ margin:0 auto; padding:0; width:988px; }
+
+
+ .sm1{ margin:0; padding:0; list-style:none; padding-left:5px;}
+ .sm11{ text-align:left; background:#9DCFE8; padding-left:10px; border-bottom:1px dashed #C5C5C5; margin:1px;}
+ .sm11 a:visited, .sm11 a:link{ color:#1264D1}
+ .sm11 a:hover{ color:#003399}
+ .sm22{ text-align:left; padding-left:2px; padding-top:3px; padding-bottom:3px; border-bottom:1px dashed #C5C5C5;}
+#pm{ margin:0; padding:0; width:720px;}
+.pm1{ margin:0; padding:0; width:720px;}
+.pm1 li{ float:left; list-style:none; padding-bottom:25px; width:240px}
+.pm1 li span{ border:1px #CCCCCC solid; }
+.pm12{ margin:0; padding:0; border:1px #CCCCCC solid; width:120px; height:120px; padding:10px; }
+.pm122{ text-align:center;}
+
+.nav{ margin:0; padding-top:5px;font:Arial, Helvetica, Verdana, Geneva, sans-serif; font-size:12px; font-weight:bold;text-align:center}
+.nav_lg{text-align:right; padding-bottom:12px; padding-right:15px;}
+.sy{FONT-WEIGHT: bold; color:#000000; FONT-FAMILY: Arial, Verdana, sans-serif; letter-spacing:1px; }
+.sy a:link{ color:#000000}
+.sy a:visited{ color:#000;}
+.sy a:hover{ color:#FF3333}
+
+.con_a{ padding:0 5px 5px 5px; color:#000000; }
+.con_p{ padding:0; color:#000000;  margin:0;}
+
+.midholder {
+float:left;
+width:130px;
+height:130px;
+margin-right:10px;
+margin-top:0px; 
+margin-left:0px;
+padding-left:10px 
+}
+.midholder a{
+width:auto;
+float:none;
+}
+.midholder:hover {
+background: #B8B8B8;
+}
+.midholder p {
+margin:0;
+padding:0;
+text-indent:0;
+border:1px solid #666666; 
+padding:5px;
+}
+.midholder p a {
+margin:0;
+padding:0;
+}
+
+.pm1 li a .fb{
+display:block;
+margin:2px 0 2px 0;
+border:0px;
+font-weight:bold;
+}
+.fb{
+font-weight:bold;
+margin:0; 
+padding:0;
+}
+#footer, #ft{ margin:0 auto; padding:0; text-align:center; padding-top:10px;}

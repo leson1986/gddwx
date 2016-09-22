@@ -1,0 +1,39 @@
+<?php /* Smarty version 2.6.14, created on 2013-01-08 18:42:35
+         compiled from head.html */ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $this->_tpl_vars['sitename']; ?>
+</title>
+<META NAME="Keywords" CONTENT="<?php echo $this->_tpl_vars['sitekeywords']; ?>
+">
+<META NAME="Description" CONTENT="<?php echo $this->_tpl_vars['sitedescription']; ?>
+">
+<link rel="stylesheet" type="text/css" href="css/css2010.css" />
+</head>
+
+<body>
+<div id="page">
+   <div id="head">
+     <div style="height:20px;"></div>
+     <div class="head_l"><img src="images/gan_03.jpg" width="311" height="58" /></div>
+     <div class="head_r">
+	   <div class="nav_lg"><a href="index_cn.php" class="left_menu">CHINESE</a> | <a href="index.php" class="left_menu">ENGLISH</a></div>
+	   <DIV class="nav"><SPAN class=sy><A 
+      href="index.php">Home</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="about.php">About us</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="products.php">Products</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="download.php?menuid=7&classid=1">Download</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="howtobuy.php">How to buy</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="feedback.php">Feedback</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="contact.php">Contact us</A></SPAN></DIV>
+	 </div>
+   </div>
+   <div id="cl"></div>
+   
+      <div id="banner">
+     <div class="banner_l"><img src="images/gan_06.jpg" width="311" height="124" /></div>
+     <div class="banner_r"></div>
+   </div>
+   <div id="cl"></div>

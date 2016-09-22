@@ -1,0 +1,78 @@
+<div class="maintable_div" style="width:800px">
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead"><{$page_type}></div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr class="title">
+        <th width="35" align="center" bgcolor="#D8E0E5">选中</th>
+        <th width="100" align="center" bgcolor="#D8E0E5"><a href="<{$sort_name}>">联系人</a></th>
+        <th  align="center" bgcolor="#D8E0E5">联系地址</th>
+        <th  align="center" bgcolor="#D8E0E5"><a href="<{$sort_email}>">E-mail</a></th>
+        <th width="110" align="center" bgcolor="#D8E0E5"><a href="<{$sort_tel}>">联系电话</a></th>
+        <th width="145" align="center" bgcolor="#D8E0E5"><a href="<{$sort_pubtime}>">提交时间</a></th>
+        <th width="100" align="center" bgcolor="#D8E0E5"><a href="<{$sort_status}>">状态</a></th>
+      </tr>
+      <{section name=sec loop=$row_result}>
+      <tr bgcolor="#F0F0F0">
+        <td align="center"><input name="id" type="checkbox" value="<{$row_result[sec].id}>" /></td>
+        <td align="center">&nbsp;<{$row_result[sec].name|light_keyword:$search_key}></td>
+        <td align="center">&nbsp;<{$row_result[sec].add|light_keyword:$search_key}></td>
+        <td align="center">&nbsp;<{$row_result[sec].email}></td>
+        <td align="center"><{$row_result[sec].tel}></td>
+        <td align="center"><{$row_result[sec].pubtime}></td>
+        <td align="center"><span class=<{if $row_result[sec].status}>"green">显示<{else}>"gray">不显示<{/if}></span>&nbsp;&nbsp;&nbsp;[<a href="reply_edit.php?<{$sort_url_param}>&page=<{$curr_page}>&id=<{$row_result[sec].id}>">回复</a>]</td>
+      </tr>
+	  <tr bgcolor="#F0F0F0">
+        <td colspan="7" align="left">&nbsp;&nbsp;&nbsp;留言内容&nbsp;:&nbsp;&nbsp;
+		      <{if $row_result[sec].Sex eq 0}>[<span style="color:#FF0000">咨询</span>]<{/if}>
+			  <{if $row_result[sec].Sex eq 1}>[<span style="color:#FF0000">建议</span>]<{/if}>
+			  <{if $row_result[sec].Sex eq 2}>[<span style="color:#FF0000">投诉</span>]<{/if}>
+			  <{$row_result[sec].content }></td>
+        </tr>
+		<tr bgcolor="#F0F0F0">
+        <td colspan="7" align="left">&nbsp;&nbsp;&nbsp;回复内容&nbsp;:&nbsp;&nbsp;<{$row_result[sec].return_content }></td>
+        </tr>
+      <{/section}>
+      <tr bgcolor="#F0F0F0">
+        <td colspan="7">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="noborder">
+            <tr>
+              <td align="center" width="30"><input name="chkAll" type="checkbox" onclick="CheckAll('id')" /></td>
+              <td align="left">全部选中</td>
+              <td><div class="PageControl"><{$page_list}></div></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+<div class="formControl">
+  <input type="button" name="submit" value="留言显示" class="button" onclick="location.href='?<{$sort_url_param}>&page=<{$curr_page}>&action=confirm&id='+getOperaValue('id');" />
+  <input type="button" name="submit" value="留言不显示" class="button" onclick="self.location='?page='+GetUrlParam('page')+'&action=deconfirm&id='+getOperaValue('id');" />
+  <input type="button" name="submit" value=" 删除所选 " class="button" onclick="batchDel('?<{$sort_url_param}>&page=<{$curr_page}>&action=del&id=',getOperaValue('id'));" />
+  <input type="button" name="return" value="返回上一页" class="button" onclick="history.go(-1)" />
+</div>
+
+<div class="maintable_div" style="width:800px">
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead">留言搜索</div></th>
+  </tr>
+  <tr>
+    <td>
+    <div class="searchbox">
+      <form name="search" action="<{$search_url}>" method="post">
+        <strong>搜索关键字 :</strong>
+        <input name="keyword" type="text" value="<{$keyword}>" style="width:300px" class="text" />
+        <input type="submit" name="submit" value=" 搜 索 " class="button" />
+      </form>
+    </div>
+    </td>
+  </tr>
+</table>
+</div>

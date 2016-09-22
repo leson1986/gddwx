@@ -1,0 +1,32 @@
+* {line-height:150%}
+
+body {margin:0;color:#000;font:normal 12px Arial,Verdana,Tahoma;background:#F0F0F0;}
+
+table, form, input, textarea {margin:0;font:normal 12px Arial,Verdana,Tahoma;color:#000}
+
+a:link,a:visited {color:#000;text-decoration:none}
+a:hover {text-decoration:underline}
+
+#container {}
+
+#menu {width:160px;padding:0px;margin:5px 0 0 1px;text-align:left;list-style:none;}
+
+/* 管理目录首页 */
+.main_item {margin:5px 0 10px 0;display:none}
+.main_item .text {display:block;background:url(main_item_top.gif) no-repeat;color:#FFF;font-size:12px;font-weight:bold;cursor:default;padding:0 0 0 35px;width:104px;margin:auto;line-height:23px;letter-spacing:1px;}
+.main_item ul {margin:0 10px;padding:0;list-style:none;border:1px solid #6A0000;background:#E5E5E5}
+.main_item ul li {padding:5px 0 5px 20px}
+.main_item ul li .spear {margin:0 4px}
+
+/* 菜单项目 */
+.item {margin:4px auto;border:solid #A90307;border-width:0px 0px 1px 0px;padding-bottom:4px}
+.item .title:link,.item .title:visited,.item .title:hover,
+.item .select_title:link, .item .select_title:visited, .item .select_title:hover {display:block;background:#850100 url(item_top_bg.gif);color:#FFF;font-size:12px;cursor:pointer;padding:0 0 0 15px;border-left:12px solid #200;width:113px;margin:auto;line-height:22px;letter-spacing:1px}
+.item .title:hover {color:#FFFF6F;border-color:#444;background:#A00101 url(item_top_bg.gif);text-decoration:none}
+.item .select_title:link, .item .select_title:visited, .item .select_title:hover {color:#FFFF6F;border-color:#444;background:#A00101 url(item_top_bg.gif);text-decoration:none}
+
+/* 子菜单区域 */
+.item ul {margin:0;padding:0;list-style:none;display:none;}
+.item ul li {}
+.item ul li a:link, .item ul li a:visited, .item ul li a:hover {display:block;background:#E0E0E0;padding:2px 0 0 25px;width:115px;margin:3px auto 0 auto;line-height:16px;text-decoration:none;color:#303030;}
+.item ul li a:hover {background:#D5D5D5}

@@ -1,0 +1,31 @@
+body {margin:0px;padding:0px;color:#333;background:#FFF;font:12px Tahoma,Arial}
+
+form {margin:0px}
+
+input {font:12px Tahoma,Arial}
+
+.button {border:solid 1px #cccccc;background:#E9ECEF;color:#666666;font-weight:bold;font-size:12px;padding:4px 4px 1px 4px;}
+
+.login {margin:60px auto auto auto;height:200px;padding:15px;border:1px solid #cccccc;width:429px;background:#F1F3F5;}
+
+.login h1 {background:url(../images/login_header.png) left top no-repeat;color:#333;margin:0px;height:50px;padding:15px 4px 0 50px;text-align:left;font-size:12px;}
+
+.login p {padding:0 1em;}
+
+.form-block {border:1px solid #cccccc;background:#E9ECEF;padding:10px 10px 10px 10px;}
+
+.login-form {text-align:left;float:right;width:60%;}
+
+.login-text {text-align:left;width:40%;float:left;}
+
+.inputlabel {font-weight:bold;text-align:left;}
+
+.inputlabel img {margin:0 0 5px 0;}
+
+.inputbox {width:150px;margin:0 0 8px 0;border:1px solid #999;padding:0px;background:#FFFFFF}
+
+.verifycode {width:95px;margin:0 5px 8px 0;border:1px solid #999;padding:0px;background:#FFFFFF}
+
+.clr {clear:both;}
+
+.ctr {text-align:center;}

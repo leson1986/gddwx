@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$charset}>" lang="<{$charset}>">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<{$charset}>" />
+    <meta http-equiv="Content-Language" content="<{$charset}>" />
+    <title><{$sitename}> -- 后台管理</title>
+    <script language="JavaScript" type="text/javascript" src="../scripts/prototype.js"></script>
+    <script language="JavaScript" type="text/javascript" src="../scripts/common.js"></script>
+    <script language="JavaScript" type="text/javascript" src="style/<{$webmaster_skin}>menu.js"></script>
+    <link href="style/<{$webmaster_skin}>/menu.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <ul id="menu">
+
+<{section name=sec1 loop=$main_class}>
+    <li class="item"><a class="title" name="<{$main_class[sec1].main_class_id}>" title="<{$main_class[sec1].main_class_info}>" href="#"><{$main_class[sec1].main_class_name}></a>
+      <ul id="opt_<{$main_class[sec1].main_class_id}>" class="optiton">
+<{section name=sec2 loop=$main_class[sec1].main_class_sub}>
+        <li><a href="<{$main_class[sec1].main_class_sub[sec2].sub_class_value}>" target="mainFrame" title="<{$main_class[sec1].main_class_sub[sec2].sub_class_info}>"><{$main_class[sec1].main_class_sub[sec2].sub_class_name}></a></li>
+<{/section}>
+      </ul>
+    </li>
+<{/section}>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<div class="maintable_div" style="width:800px">
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead"><{$page_title}></div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr class="title">
+        <th width="35" align="center" bgcolor="#D8E0E5">选中</th>
+        <th width="180" align="center" bgcolor="#D8E0E5"><a href="<{$sort_jobs}>">职位</a></th>
+        <th width="120" align="center" bgcolor="#D8E0E5"><a href="<{$sort_place}>">工作地点</a></th>
+        <th width="55" align="center" bgcolor="#D8E0E5"><a href="<{$sort_number}>">招聘人数</a></th>
+        <th width="100" align="center" bgcolor="#D8E0E5"><a href="<{$sort_salary}>">待遇</a></th>
+        <th width="140" align="center" bgcolor="#D8E0E5"><a href="<{$sort_posttime}>">发布时间</a></th>
+        <th width="50" align="center" bgcolor="#D8E0E5"><a href="<{$sort_expires}>">有效期</a></th>
+        <th width="55" align="center" bgcolor="#D8E0E5"><a href="<{$sort_status}>">状态</a></th>
+      </tr>
+      <{section name=sec loop=$row_result}>
+      <tr bgcolor="#F0F0F0">
+        <td align="center"><input name="id" type="checkbox" value="<{$row_result[sec].id}>" /></td>
+        <td align="center"><a href="job_edit.php?<{$sort_url_param}>&page=<{$curr_page}>&id=<{$row_result[sec].id}>" title="点击编辑该记录"><{$row_result[sec].jobs|light_keyword:$search_key}></a></td>
+        <td align="center">&nbsp;<{$row_result[sec].place|light_keyword:$search_key}></td>
+        <td align="center"><{$row_result[sec].number}> 人</td>
+        <td align="center">&nbsp;<{$row_result[sec].salary}></td>
+        <td align="center"><{$row_result[sec].posttime}></td>
+        <td align="center"><{$row_result[sec].expires}> 天</td>
+        <td align="center"><span class=<{if $row_result[sec].status}>"green">有效<{else}>"gray">无效<{/if}></span></td>
+      </tr>
+      <{/section}>
+      <tr bgcolor="#F0F0F0">
+        <td colspan="8">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="noborder">
+            <tr>
+              <td align="center" width="30"><input name="chkAll" type="checkbox" onclick="CheckAll('id')" /></td>
+              <td align="left">全部选中</td>
+              <td><div class="PageControl"><{$pages_list}></div></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="formControl">
+  <input type="button" name="submit" value="添加信息" class="button" onclick="location.href='job_add.php';" />
+  <input type="button" name="submit" value="设为有效" class="button" onclick="location.href='?page='+GetUrlParam('page')+'&action=confirm&id='+getOperaValue('id');" />
+  <input type="button" name="submit" value="设为无效" class="button" onclick="location.href='?page='+GetUrlParam('page')+'&action=deconfirm&id='+getOperaValue('id');" />
+  <input type="button" name="submit" value="删除所选" class="button" onclick="batchDel('?<{$sort_url_param}>&page=<{$curr_page}>&action=del&id=',getOperaValue('id'));"/>
+  <input type="button" name="return" value="返回上一页" class="button" onclick="history.go(-1)" />
+</div>
+
+<div class="maintable_div" style="width:800px">
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead">信息搜索</div></th>
+  </tr>
+  <tr>
+    <td>
+    <div class="searchbox">
+      <form name="search" action="<{$search_url}>" method="post">
+        <strong>搜索关键字 :</strong>
+        <input name="keyword" type="text" value="<{$keyword}>" style="width:300px" class="text" />
+        <input type="submit" name="submit" value=" 搜 索 " class="button" />
+      </form>
+    </div>
+    </td>
+  </tr>
+</table>
+</div>

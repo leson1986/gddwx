@@ -1,0 +1,67 @@
+<div class="maintable_div" style="width:750px">
+<table width="750" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead"><{$page_type}></div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="750" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr>
+        <th align="center" width="365">文 件 名</th>
+        <th align="center" width="120">文件大小</th>
+        <th align="center" width="140">最后修改时间</th>
+        <th align="center" width="100">操 作</th>
+      </tr>
+    <{if $currpath!=""}>
+      <tr>
+        <td><img src="images/fileico/upper.gif" border="0" align="absmiddle" style="margin:0px 6px 0px 0px"/><a href="?currpath=<{$to_upper_path}>">返回上一级目录</a></td>
+        <td align="right">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+        <td align="center">&nbsp;</td>
+      </tr>
+    <{/if}>
+      <{section name=sec loop=$folder_result}>
+      <tr>
+        <td><img src="images/fileico/<{$folder_result[sec].fileicon}>.gif" align="absmiddle" style="margin:0px 6px 0px 0px"/><a href="<{$folder_result[sec].filelink}>"><{$folder_result[sec].filename}></a>    </td>
+        <td align="right"><{$folder_result[sec].filesize}> Kb&nbsp;</td>
+        <td align="center"><{$folder_result[sec].createdate}></td>
+        <td align="center"><a href="<{$folder_result[sec].delurl}>" class="rdelete">删除</a></td>
+      </tr>
+      <{/section}>
+      <{section name=sec loop=$file_result}>
+      <tr>
+        <td><img src="images/fileico/<{$file_result[sec].fileicon}>.gif" align="absmiddle" style="margin:0px 6px 0px 0px"/><a href="<{$file_result[sec].filelink}>" target="_blank"><{$file_result[sec].filename}></a>    </td>
+        <td align="right"><{$file_result[sec].filesize}> Kb&nbsp;</td>
+        <td align="center"><{$file_result[sec].createdate}></td>
+        <td align="center"><a href="<{$file_result[sec].downurl}>">下载</a>&nbsp;&nbsp;&nbsp;<a href="<{$file_result[sec].delurl}>" class="rdelete">删除</a></td>
+      </tr>
+      <{/section}>
+      <tr>
+        <td colspan="4">
+        <div>
+        当前路径：<span class="gray"><{$dir_name}></span>&nbsp;&nbsp;
+        可用空间：<span class="gray"><{$total_space}> MB</span>&nbsp;&nbsp;
+        剩余空间：<span class="gray"><{$free_space}> MB</span>&nbsp;&nbsp;
+        </div>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="formControl">
+  <input name="newfolder" type="button" value="新建文件夹" class="button" onclick="createFolder()" />
+  <input name="uploadfile" type="button" value=" 上传文件 " class="button" />
+  <input type="button" name="return" value="返回上级目录" class="button" onclick="self.location.href='?currpath=<{$to_upper_path}>'" />
+</div>
+
+<script language="javascript" type="text/javascript">
+function createFolder() {
+    var FolderName = prompt("请输入文件夹名称!","");
+    if (FolderName!="") {
+        self.location.href="?action=newfolder&currpath=<{$currpath|urlencode}>&foldername="+FolderName;
+    }
+}
+</script>

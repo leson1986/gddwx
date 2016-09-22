@@ -1,0 +1,38 @@
+<form name="article_edit" action="" method="post">
+<div class="maintable_div" style="width:750px">
+<table width="750" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead"><{$page_title}></div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="750" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr bgcolor="#FFFFFF">
+        <td width="80" align="center" valign="top">文本内容</td>
+        <td align="left">
+        <textarea name="article_content" id="article_content" class="hide_textarea"><{$article_content|correct_path}></textarea>
+        <iframe src="fck2/editor/fckeditor.html?InstanceName=article_content&amp;Toolbar=Custom" width="100%" height="400" frameborder="no" scrolling="no"></iframe></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td align="center">文本内容(EN)</td>
+        <td align="left">
+<textarea name="article_content_en" id="article_content_en" class="hide_textarea"><{$article_content_en|correct_path}></textarea>
+        <iframe src="fck2/editor/fckeditor.html?InstanceName=article_content_en&amp;Toolbar=Custom" width="100%" height="400" frameborder="no" scrolling="no"></iframe></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td align="center">上次编辑</td>
+        <td align="left"><{$author}>  [ <{$posttime}> ]</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="formControl">
+  <input type="submit" name="Submit" value=" 保存设置 " class="button" />
+  <input type="button" name="return" value="返回上一页" class="button" onclick="history.go(-1)" />
+  <input type="hidden" name="action" value="submit" />
+  <input type="hidden" name="article_id" value="<{$article_id}>" />
+</div>
+</form>

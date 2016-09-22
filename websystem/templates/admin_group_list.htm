@@ -1,0 +1,32 @@
+<div class="maintable_div" style="width:600px">
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead"><{$page_title}></div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr class="title">
+        <th align="center" bgcolor="#D8E0E5">权限排序</th>
+        <th align="center" bgcolor="#D8E0E5">权限组名称</th>
+        <th align="center" bgcolor="#D8E0E5">权限组介绍</th>
+        <th align="center" bgcolor="#D8E0E5">操作</th>
+      </tr>
+      <{section name=sec loop=$row_result}>
+      <tr bgcolor="#F0F0F0">
+        <td align="center"><{$row_result[sec].group_id}></td>
+        <td align="center"><{$row_result[sec].group_name}></td>
+        <td align="center"><{$row_result[sec].group_info}></td>
+        <td align="center"><a href="admin_group_edit.php?id=<{$row_result[sec].id}>">编辑</a>&nbsp;&nbsp;&nbsp;<a href="?action=del&id=<{$row_result[sec].id}>" class="rdelete">删除</a></td>
+      </tr>
+      <{/section}>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="formControl">
+  <input type="button" name="submit" value="新增权限组" class="button" onclick="location.href='admin_group_add.php';" />
+  <input type="button" name="return" value="返回上一页" class="button" onclick="history.go(-1)" />
+</div>

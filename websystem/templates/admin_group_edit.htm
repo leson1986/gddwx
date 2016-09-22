@@ -1,0 +1,37 @@
+<form name="group_edit" action="" method="post">
+<div class="maintable_div" style="width:600px">
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead"><{$page_title}></div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr bgcolor="#FFFFFF">
+        <td width="150" align="center">权限组排序</td>
+        <td align="left"><input name="group_id" type="text" class="text" size="5" value="<{$group_id}>" />
+          <span class="red">*</span> 仅限数字，用来区别权限的大小</td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td align="center">权限组名称</td>
+        <td align="left"><input name="group_name" type="text" class="text" size="30" value="<{$group_name}>" />
+          <span class="red">*</span> 仅限英文字符[a-z,A-Z,0-9]</td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td align="center">权限组介绍</td>
+        <td align="left"><input name="group_info" type="text" class="text" size="30" value="<{$group_info}>" />
+          <span class="red">*</span> 该组的简单描述</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="formControl">
+  <input type="submit" name="submit" value=" 保存设置 " class="button" />
+  <input type="button" name="return" value="返回上一页" class="button" onclick="history.go(-1)" />
+  <input type="hidden" name="action" value="submit" />
+  <input type="hidden" name="id" value="<{$id}>" />
+</div>
+</form>

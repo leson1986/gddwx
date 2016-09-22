@@ -1,0 +1,92 @@
+/*全局样式*/
+* {
+    line-height:150%;
+}
+body {
+    margin:0;
+    padding:0;
+    text-align:center;
+    color:#000;
+    font:normal 12px Tahoma, Arial, Helvetica, sans-serif;
+    background:#F8F8F8;
+}
+table, form, input, textarea {margin:0;font:normal 12px Tahoma, Arial;color:#000}
+img {border:none}
+
+/* 基本超链接样式 */
+a:link, a:visited {color:#0033CC; text-decoration:none}
+a:hover {color:#CC0000; text-decoration:none}
+
+/* 页面层容器 */
+#container {padding:0px 0 30px 0;margin:auto;text-align:left}
+
+.maintable_div {margin:10px auto 10px auto;border:1px solid #E7CDCE;padding:2px;background:#F0F0F0}
+.maintable {margin:auto}
+.maintable th {font:bold 12px Tahoma, Arial, Helvetica;background:url(main_table_top_bg.gif) repeat-x;color:#CC0003;height:24px}
+th .thead {background:url(arrow_5.gif) 10px 5px no-repeat;padding:0 0 0 30px}
+.maintable td.maincontent {}
+.maintable td.menubar {}
+
+/* 数据列表表格样式 */
+.datalist {border:1px solid #FFF;border-width:0px 0px 0px 0px;margin:auto}
+.datalist th{border:1px solid #FFF;border-width:0px 1px 0 0;color:#fff;background:#B10020 url(thead.gif)}
+.datalist th a:link,.datalist th a:visited {color:#fff}
+.datalist th a:hover {color:#FFFF6F}
+.datalist td{border:1px solid #FFF;border-width:1px 1px 0 0;color:#111;padding:2px}
+
+/* 无边框表格 */
+.noborder, .noborder th, .noborder td {border:0}
+
+/* 表单样式 */
+fieldset {border:1px solid #aaa;margin:5px 0 10px 0}
+legend {font-weight:bold;color:#335EA8}
+fieldset table {margin:2px 0 8px 0}
+textarea {overflow:auto;padding:2px;font:12px Tahoma;border:1px solid #ADBBCA;background:#FCFCFF;color:#081810}
+select {font:12px Arial;background:#FCFCFF;color:#081810}
+input.button {margin:0px;padding:0px 3px 0px 3px;border:1px solid #979090;background:#F8F8F8;color:#000}
+input.text {padding:2px;font:12px Tahoma;border:1px solid #ADBBCA;background:#FCFCFF;color:#081810}
+
+/* 表单控制按钮集 */
+.formControl {text-align:center;margin:5px 0 10px 0;}
+.formControl input.button {margin:0px 5px;padding:2px 3px 2px 3px;}
+
+/* 搜索栏 */
+.searchbox {margin:5px;text-align:center}
+.searchbox strong {color:#000;font-weight:normal}
+.searchbox input.text {padding:2px 0;margin:0 5px}
+
+/* 分页样式 */
+.PageControl {text-align:right;width:100%;margin:5px auto}
+.page_list {font:normal 11px Tahoma}
+.page_list a:link, .page_list a:visited {font:normal 11px Tahoma;color:#0063DC;padding:0 3px;text-align:center;text-decoration:none;}
+.page_list a:hover {text-decoration:underline}
+.page_list .pageInfo {margin:0 5px}
+.page_list .pageNum {padding:0 3px;color:#C00}
+.page_list a.currBtn:link, .page_list a.currBtn:visited {color:#D00;font:bold 11px Tahoma}
+.page_list a.currBtn:hover {text-decoration:underline}
+
+/* 提示信息样式 */
+.msg_body {margin:10px}
+.msg_content {margin:18px 0 8px 0;font:normal 12px Tahoma}
+.msg_url {}
+.msg_url a:link,.msg_url a:visited {}
+.msg_url a:hover {}
+
+/* 隐藏的文本域，用于编辑器模式中 */
+.hide_textarea {display:none}
+
+/* 高亮关键字样式 */
+.highlight_keyword {background:#FFEE55;color:#000}
+
+
+/* 其他样式 */
+.data_tr1 {background:#E7E7E7}
+.data_tr2 {background:#F0F0F0}
+.data_tr3 {background:#E7E7E7}
+.data_tr4 {background:#F0F0F0}
+.red {color:#f00}
+.wine {color:#E00}
+.gray {color:#999}
+.gray2 {color:#666}
+.gray3 {color:#333}
+.green {color:#060}

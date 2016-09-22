@@ -1,0 +1,74 @@
+<{include file="head_cn.html"}>
+ <!--头部结束-->
+   <div id="ind_center">
+     <div class="left">
+	 <{include file="left_cn.html"}>
+	 </div>
+     <div class="right">
+       <div id="notice"><p><MARQUEE scrollAmount=1 scrollDelay=4 width=610 align="left" onMouseOver="this.stop()" onMouseOut="this.start()">
+		<{section name=new loop=$news}> 		           
+<a href="news_detail_cn.php?menuid=2&classid=<{$news[new].classid}>&id=<{$news[new].id}>" class="top_new"><font color='#FF0000'>&bull;&nbsp;<{$news[new].news_title_en|dodi_msubstr:0:15}></font>&nbsp;&nbsp;</a>
+		 <{/section}>
+                    </MARQUEE></p></div>
+     
+      <div id="cl"></div>
+      <div id="gd_pro_l"><img src="images/gd_p1.jpg" width="14" height="14" /><span>产品展示</span></div>
+      <div id="gd_pro_r"><a href="products_cn.php"><img src="images/more.jpg" width="49" height="16" border="0" /></a></div>
+      <div id="cl"></div>
+      <div id="line_1"></div>  
+	  <div id="gd_pro">
+
+				<!--下面是向左滚动代码-->
+
+<div id="colee_left" style="overflow:hidden;width:730px;">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td id="colee_left1" valign="top" align="center">
+<table cellpadding="2" cellspacing="0" border="0">
+<tr align="center">
+<{section name=p loop=$products}>
+<td><div class="pm12"><a href="products_detail_cn.php?menuid=3&id=<{$products[p].id}>&classid=<{$products[p].products_classid}>"><img src="<{$products[p].products_thumb|correct_path|getThumb:120:120}>" alt="<{$products[p].products_name}>" border="0"/></a></div><div class="pm122"><{$products[p].products_name}></div></td>
+<{/section}>
+</tr>
+</table>
+</td>
+<td id="colee_left2" valign="top"></td>
+</tr>
+</table>
+</div>
+<script>
+//使用div时，请保证colee_left2与colee_left1是在同一行上.
+var speed=30//速度数值越大速度越慢
+var colee_left2=document.getElementById("colee_left2");
+var colee_left1=document.getElementById("colee_left1");
+var colee_left=document.getElementById("colee_left");
+colee_left2.innerHTML=colee_left1.innerHTML
+function Marquee3(){
+if(colee_left2.offsetWidth-colee_left.scrollLeft<=0)//offsetWidth 是对象的可见宽度
+colee_left.scrollLeft-=colee_left1.offsetWidth//scrollWidth 是对象的实际内容的宽，不包边线宽度
+else{
+colee_left.scrollLeft++
+}
+}
+var MyMar3=setInterval(Marquee3,speed)
+colee_left.onmouseover=function() {clearInterval(MyMar3)}
+colee_left.onmouseout=function() {MyMar3=setInterval(Marquee3,speed)}
+</script>
+
+<!--向左滚动代码结束-->
+
+
+</div>
+      <div id="cl"></div>
+      <div id="gd_pro_l"><img src="images/gd_p1.jpg" width="14" height="14" /><span>公司简介</span></div>
+      <div id="gd_pro_r"></div>
+      <div id="cl"></div>
+      <div id="line_1"></div>
+      <div id="gd_pro"><div class="con_a">			
+	<{$company[0].article_content|correct_path}>
+</div></div>
+    </div>
+    <div id="cl"></div>
+   </div>
+   <div id="ind_c_bot"><img src="images/gan_11.jpg" width="988" height="3" /></div>
+      <div id="cl"></div>
+	 <{include file="footer_cn.html"}>

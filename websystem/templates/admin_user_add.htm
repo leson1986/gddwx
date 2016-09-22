@@ -1,0 +1,45 @@
+<form name="user_add" action="" method="post">
+<div class="maintable_div" style="width:600px">
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead"><{$page_title}></div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr bgcolor="#FFFFFF">
+        <td align="center">用户名</td>
+        <td align="left"><input name="admin_user" type="text" class="text" size="30" />
+          <span class="red">*</span></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td align="center">密&nbsp;&nbsp; 码</td>
+        <td align="left"><input name="admin_pwd" class="text" type="password" size="30" /> <span class="red">*</span></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td align="center">确认密码</td>
+        <td align="left"><input name="confirm_pwd" class="text" type="password" size="30" /> <span class="red">*</span></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td align="center">权限组</td>
+        <td align="left">
+        <select name="admin_level">
+         <{html_options values=$group_ids output=$group_infos selected=$admin_level}>
+        </select></td>
+      </tr>
+      <tr bgcolor="#FFFFFF">
+        <td align="center">状&nbsp;&nbsp; 态</td>
+        <td align="left"><{html_radios name="admin_status" options=$admin_status_opt checked=$admin_status separator="&nbsp;"}></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="formControl">
+  <input type="submit" name="submit" value=" 保存设置 " class="button" />
+  <input type="button" name="return" value="返回上一页" class="button" onclick="history.go(-1)" />
+  <input type="hidden" name="action" value="submit" />
+</div>
+</form>

@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ margin:0;padding:0; font:normal 12px "",Tahoma,Arial,Verdana;white-space:normal; background-color:#FFFFFF; line-height:150%; color:#023F88; letter-spacing:1.5px}
+form,table,textarea,input{ margin:0; padding:0;font:normal 12px "",Tahoma,Arial,Verdana;white-space:normal; line-height:150%}
+img{ border:none}
+a:link,a:visited,a:hover,a:active {text-decoration: none;}
+
+a.product{text-decoration: none;color: #026205; text-decoration:underline}
+a.product:hover,a.product:active{color:#1B80C6;}
+
+a.menu{text-decoration: none;color: #FFFFFF;}
+a.menu:hover,a.menu:active{color:#FFFFFF;}
+
+a.left_menu{text-decoration: none;color: #0E0449;}
+a.left_menu:hover,a.left_menu:active{color:#39ACFF;}
+
+a.left_menu2{text-decoration: none;color: #39ACFF;}
+a.left_menu2:hover,a.left_menu2:active{color:#0E0449;}
+
+a.news{text-decoration: none;color: #676769;}
+a.news:hover,a.news:active{color:#39ACFF;}
+
+a.buttom{text-decoration: none;color: #737373;}
+a.buttom:hover,a.buttom:active{color:#39ACFF;}
+
+a.top_new{text-decoration: none;color: #023F88;}
+a.top_new:hover,a.top_new:active{color:#39ACFF;}
+
+
+	.PageControl {text-align:center; clear:both; color:#555555; margin:5px;}
+	.page_list {font:normal 11px Tahoma}
+	.page_list a:link, .page_list a:visited {font:normal 9px Tahoma; color:#fff; padding:1px 6px 2px 6px; margin:0 3px; text-align:center; border:1px solid #1C82D1; background:#1C82D1; text-decoration:none}
+	.page_list a:hover {text-decoration:none; background:#FCECED; color:#1C82D1}
+	.page_list .pageInfo {margin:0 5px}
+	.page_list .pageNum {padding:0 1px}
+	.page_list a.currBtn:link, .page_list a.currBtn:visited {color:#fff; background:#1C82D1;}
+	.page_list a.currBtn:hover {text-decoration:none; background:#FCECED; color:#1C82D1}
+	.page_list a.firstBtn:link, .page_list a.firstBtn:visited, .page_list a.lastBtn:link, .page_list a.lastBtn:visited {padding:1px 3px 3px 3px ; font:bold 9px Arial}
+	.page_list a.firstBtn:hover, .page_list a.firstBtn:hover {text-decoration:none}
+
+   .title{ color:#FFF}
+   .index_bottom{ color:#737373}
+   .index_left_bg{ background:url(../images/index_left_bg.jpg) top repeat-x}
+   .index_01{ border-bottom:#80B0D6 1px dotted}
+   .product_name{ color:#606060}
+   .company_menu{ color:#0E0449}
+   .company_title{color:#1C82D1}
+   .company_line{ border-bottom:#1CD1CD dotted 1px}
+   .company_content{ border:#1CD1CD solid 1px}
+   .company_title2{ color:#1C82D1; font-weight:bold}
+   .news_list{ color:#676769}
+   .product_images{ border:#D2E6F6 solid 1px}
+   .product_name{ color:#4A4377; font-weight:bold; font-size:13px;}
+   .product_content{ color:#424242}
+   .news_detail{ color:#000000; font-weight:bold}
+   .product_detail{ color:#0F0448; font-weight:bold; font-size:13px}
+   .product_list{ width:40px%; float:left; margin:0 10px 0 0; overflow:hidden}
+   
+
+
+   #daili{  height:26px;width:682px; float:left; overflow:hidden; background-color:#F1F1F1;}
+   #daili, #daili ul {list-style:none;padding:2px 0 0 20px;margin:0px;text-align:center}	
+   #daili ul li { height:35; width:140px; margin:0 20px 0 0; float:left; overflow:hidden; background-color:#DEDEDE;}
+   #daili li:hover ul,#daili li.sfhover ul{display:block;}
+   #daili ul li a:link,#daili ul li a:visited{ color:#383067;}
+   #daili ul li a:hover,#daili ul li a:active{ color:#000;}
+
+/
+ #showgood_main {width:785px;overflow:hidden; height:161px}
+ #showgood_main table {margin:0px 13px 0px 0px; padding:0px;width:40px%; float:left;overflow:hidden}
+ #intab_main {float:left;width:785%;} 
+ #showgood_main #tab1_main {float:left;} 
+ #showgood_main #tab2_main {float:left;}
+ 
+ .product_table{ border:#7E8FA3 solid 1px}
+ 
+ #page{ margin:0 auto; padding:0; width:988px;}
+#cl{ clear:both}
+
+#head{ margin:0 auto; padding:0; width:988px;}
+#head .head_l{ margin:0; padding:0; width:311px; height:58px; float:left;}
+#head .head_r{ margin:0; padding:0; width:677px; height:58px; background:url(../images/gan_04.jpg) no-repeat left; float:right;}
+
+#banner{ margin:0 auto; padding:0; width:988px;}
+#banner .banner_l{ margin:0; padding:0; width:311px; height:124px; float:left;}
+#banner .banner_r{ margin:0; padding:0; width:677px; height:124px; background:url(../images/gan_07.jpg) no-repeat left; float:right;}
+
+#ind_center{ margin:0 auto; padding:0; width:988px; background:url(../images/gan_09.jpg) repeat left;}
+#ind_center .left{ margin:0; padding:0; width:195px; float:left; background:url(../images/gan_09.jpg) repeat left;}
+#ind_center .right{ margin:0 auto; padding:0; width:792px; float:right; background:url(../images/gan_09_2.jpg) repeat left; text-align:center;}
+.right #notice{ margin:0 auto; padding:0; background:url(../images/notice.jpg) repeat left; width:785px; height:37px; text-align:left; }
+.right #notice p{ margin:0 auto; padding-top:15px; margin-left:138px}
+
+.right #gd_pro{ margin-left:20px; text-align:left; padding:6px !important;}
+.right #gd_pro_l{ margin-left:20px !important; margin-left:10px; margin-top:14px;  margin-bottom:10px; padding:0; text-align:left; float:left;}
+.right #gd_pro_l span{ margin:0; padding-left:10px;}
+.right #gd_pro_r{ margin-left:20px !important; margin-left:10px; margin-top:14px; margin-right:5px;  padding:0; text-align:left; float:right;}
+.right #line_1{ margin:0 auto; padding:0; width:785px; border-top:2px #CCC solid;}
+
+#ind_c_bot{ margin:0 auto; padding:0; width:988px; }

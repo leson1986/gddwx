@@ -1,0 +1,66 @@
+<div class="maintable_div" style="width:800px">
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead">列表</div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr class="title">
+        <th  align="center" bgcolor="#D8E0E5">选中</th>
+       <th  align="center" bgcolor="#D8E0E5"><a href="<{$sort_products_name}>">名称</a></th>
+        <th  align="center" bgcolor="#D8E0E5"><a href="<{$sort_products_pubtime}>">发布时间</a></th>
+        <th  align="center" bgcolor="#D8E0E5"><a href="<{$sort_products_isvalid}>">有效</a></th>
+        </tr>
+      <{section name=sec loop=$row_result}>
+      <tr bgcolor="#F0F0F0">
+        <td align="center"><input name="id" type="checkbox" value="<{$row_result[sec].id}>" /></td>
+        <td align="center"><a href="products_daili_edit.php?<{$sort_url_param}>&page=<{$curr_page}>&id=<{$row_result[sec].id}>" title="点击编辑该记录"><{$row_result[sec].products_name|light_keyword:$search_key}></a></td>
+        <td align="center"><{$row_result[sec].products_pubtime}></td>
+        <td align="center"><span class=<{if $row_result[sec].products_isvalid}>"green">是<{else}>"gray">否<{/if}></span></td>
+        </tr>
+      <{/section}>
+      <tr bgcolor="#F0F0F0">
+        <td colspan="4">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" class="noborder">
+            <tr>
+              <td align="center" width="30"><input name="chkAll" type="checkbox" onclick="CheckAll('id')" /></td>
+              <td align="left">全部选中</td>
+              <td><div class="PageControl"><{$page_list}></div></td>
+            </tr>
+          </table></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="formControl">
+  <input type="button" name="submit" value="添加" class="button" onclick="location.href='products_daili_add.php?classid=$classid&<{$sort_url_param}>&page=<{$curr_page}>';" />
+  <input type="button" name="submit" value="审核所选" class="button" onclick="location.href='?<{$sort_url_param}>&page=<{$curr_page}>&action=confirm&id='+getOperaValue('id');" />
+  <input type="button" name="submit" value="取消审核" class="button" onclick="location.href='?<{$sort_url_param}>&page=<{$curr_page}>&action=deconfirm&id='+getOperaValue('id');" />
+  <input type="button" name="submit" value="删除所选" class="button" onclick="batchDel('?<{$sort_url_param}>&page=<{$curr_page}>&action=del&id=',getOperaValue('id'));" />
+  <input type="button" name="return" value="返回上一页" class="button" onclick="history.go(-1)" />
+</div>
+
+<div class="maintable_div" style="width:800px">
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead">搜索</div></th>
+  </tr>
+  <tr>
+    <td>
+    <div class="searchbox">
+      <form name="search" action="?<{$sort_url_param}>&page=<{$curr_page}>&action=search" method="post">
+        <strong>分类跳转：</strong>
+        <{$products_classid_box}>&nbsp;&nbsp;
+        <strong>搜索关键字 :</strong>
+        <input name="keyword" type="text" value="<{$keyword}>" style="width:250px" class="text" />
+        <input type="submit" name="submit" value=" 搜 索 " class="button" />
+      </form>
+    </div>
+    </td>
+  </tr>
+</table>
+</div>

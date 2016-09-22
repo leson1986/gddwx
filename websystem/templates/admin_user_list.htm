@@ -1,0 +1,37 @@
+<div class="maintable_div" style="width:700px">
+<table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="maintable">
+  <tr>
+    <th align="left"><div class="thead"><{$page_title}></div></th>
+  </tr>
+  <tr>
+    <td>
+    <table width="700" border="0" align="center" cellpadding="0" cellspacing="0" class="datalist">
+      <tr class="title">
+        <th width="70" align="center"><a href="<{$sort_id}>">编号</a></th>
+        <th width="170" align="center"><a href="<{$sort_admin_user}>">用户名</a></th>
+        <th width="190" align="center"><a href="<{$sort_group_info}>">权限组</a></th>
+        <th width="100" align="center"><a href="<{$sort_admin_status}>">状态</a></th>
+        <th width="136" align="center">操作</th>
+      </tr>
+      <{section name=sec loop=$row_result}>
+      <tr bgcolor="#F0F0F0">
+        <td align="center"><{$row_result[sec].id}></td>
+        <td align="center"><{$row_result[sec].admin_user}></td>
+        <td align="center"><{$row_result[sec].group_info}></td>
+        <td align="center"><span class=<{if $row_result[sec].admin_status}>"green">有效<{else}>"gray">无效<{/if}></span></td>
+        <td align="center"><a href="admin_user_edit.php?<{$sort_url_param}>&page=<{$curr_page}>&id=<{$row_result[sec].id}>">编辑</a>&nbsp;&nbsp;&nbsp;<a href="?<{$sort_url_param}>&page=<{$curr_page}>&action=del&id=<{$row_result[sec].id}>" class="rdelete">删除</a></td>
+      </tr>
+      <{/section}>
+      <tr bgcolor="#F0F0F0">
+        <td colspan="7"><div class="PageControl"><{$page_list}></div></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<div class="formControl">
+  <input type="button" name="submit" value="新增管理员" class="button" onclick="location.href='admin_user_add.php?<{$sort_url_param}>&page=<{$curr_page}>';" />
+  <input type="button" name="return" value="返回上一页" class="button" onclick="history.go(-1)" />
+</div>
