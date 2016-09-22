@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Automation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+</head>
+	
+<body>
+<!-- banner -->
+	<div class="banner">
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><span>Auto</span>mation</a>
+			</div>
+			<div class="banner-info">
+				<h1>The premier industrial manufaturer & exporter
+					stebility & emphasis on client advocacy!</h1>
+				<div class="more exporter">
+					<a href="#" class="hvr-bounce-to-top">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //banner -->	
+<!-- sticky-nav -->
+	<div class="banner-bottom">
+	<div class="container">
+		<div class="fixed-header">
+			<div class="banner-bottom-nav">
+				<span class="menu"><img src="images/menu.png" alt=" "/></span>
+					<div class="home-logo">
+						<a href="index.html"> </a>
+					</div>
+						<nav class="cl-effect-1">
+							<ul class="nav1">
+								<li><a class="scroll" href="#about">About Us</a></li>
+								<li><a class="scroll" href="#services">Services</a></li>
+								<li><a class="scroll" href="#projects">Projects</a></li>
+								<li><a class="scroll" href="#products">Products</a></li>
+								<li><a class="scroll" href="#contact">Contact</a></li>
+							</ul>
+						</nav>
+			</div>		
+					<!-- script for menu -->
+					<script> 
+						$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+						 // Animation complete.
+						});
+						});
+					</script>
+					<!-- //script for menu -->
+
+						<!-- script-for sticky-nav -->
+						<script>
+						$(document).ready(function() {
+							 var navoffeset=$(".banner-bottom").offset().top;
+							 $(window).scroll(function(){
+								var scrollpos=$(window).scrollTop(); 
+								if(scrollpos >=navoffeset){
+									$(".banner-bottom").addClass("fixed");
+								}else{
+									$(".banner-bottom").removeClass("fixed");
+								}
+							 });
+							 
+						});
+						</script>
+					<!-- //script-for sticky-nav -->
+		</div>
+		<div class="search-sub">
+			 <form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Type your text here...">
+				</div>
+				<button type="submit" class="btn btn-default">Search</button>
+			  </form>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	</div>
+<!-- //sticky-nav -->
+<!-- welcome-company -->
+	<div class="welcome-company">
+		<div class="container">
+			<div class="welcome-company-grids">
+				<div class="col-md-4 welcome-company-grid-left">
+					<div class="company-grids">
+						<div class="company-grid">
+							<img src="images/1.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="company-grid">
+							<img src="images/2.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="company-grid">
+							<img src="images/5.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="clearfix"> </div>
+						<div class="company-grid">
+							<img src="images/3.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="company-grid">
+							<img src="images/4.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="company-grid">
+							<img src="images/6.jpg" alt=" " class="img-responsive"/>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-8 welcome-company-grid-right">
+					<h3>Welcome To Our Company</h3>
+					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+						officia deserunt mollit anim id est laborum. Nam libero tempore, 
+						cum soluta nobis est eligendi optio cumque nihil impedit quo minus 
+						id quod maxime placeat facere possimus, omnis voluptas assumenda est,
+						omnis dolor repellendus. Temporibus autem quibusdam et aut officiis 
+						debitis aut rerum necessitatibus saepe eveniet.</p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //welcome-company -->
+<!-- about -->
+	<div id="about" class="about">
+		<div class="container">
+			<div class="about-grids">
+				<div class="col-md-6 about-grid-left">
+					<h3>About Us</h3>
+					<img src="images/7.jpg" alt=" " class="img-responsive"/>
+					<p>At vero eos et accusamus et iusto odio dignissimos ducimus 
+						qui blanditiis praesentium.Sed ut perspiciatis unde omnis iste natus 
+						error sit voluptatem accusantium doloremque laudantium.</p>
+						<div class="company-grids">
+							<div class="company-grid">
+								<img src="images/1.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="company-grid">
+								<img src="images/2.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="company-grid">
+								<img src="images/5.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="clearfix"> </div>
+							<div class="company-grid">
+								<img src="images/3.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="company-grid">
+								<img src="images/4.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="company-grid">
+								<img src="images/6.jpg" alt=" " class="img-responsive"/>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+				</div>
+				<div class="col-md-6 about-grid-right">
+					<h3>Mission Statements</h3>
+					<div class="col-sm-2 about-grid-lft">
+						<p>1</p>
+					</div>
+					<div class="col-sm-10 about-grid-rgt">
+						<h4>Nam libero tempore, cum soluta nobis est 
+								eligendi optio cumque aut perferendis</h4>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+							saepe eveniet ut et voluptates repudiandae sint et molestiae non 
+							recusandae. Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor repellendus.
+							Temporibus autem quibusdam.</p>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="col-sm-2 about-grid-lft">
+						<p>2</p>
+					</div>
+					<div class="col-sm-10 about-grid-rgt">
+						<h4>Sapiente libero tempore, cum soluta nobis est 
+								eligendi optio cumque aut perferendis</h4>
+						<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+							saepe eveniet ut et voluptates repudiandae sint et molestiae non 
+							recusandae. Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor repellendus.
+							Temporibus autem quibusdam.</p>
+					</div>
+					<div class="clearfix"> </div>
+					<div class="col-sm-2 about-grid-lft">
+						<p>3</p>
+					</div>
+					<div class="col-sm-10 about-grid-rgt">
+						<h4>Debitis libero tempore, cum soluta nobis est 
+								eligendi optio cumque aut perferendis</h4>
+						<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
+							saepe eveniet ut et voluptates repudiandae sint et molestiae non 
+							recusandae. Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor repellendus.
+							Temporibus autem quibusdam.</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="testimonials">
+				<h3>Testimonials</h3>
+				<div class="col-md-4 testimonial">
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
+						saepe eveniet ut et voluptates repudiandae sint et molestiae non 
+						recusandae.</p>
+					<h4>Mark Flix</h4>
+				</div>
+				<div class="col-md-4 testimonial">
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
+						saepe eveniet ut et voluptates repudiandae sint et molestiae non 
+						recusandae.</p>
+					<h4>Mark Carl</h4>
+				</div>
+				<div class="col-md-4 testimonial">
+					<p>Repudiandae autem quibusdam et aut officiis debitis aut rerum necessitatibus
+						saepe eveniet ut et voluptates repudiandae sint et molestiae non 
+						recusandae.</p>
+					<h4>James Frik</h4>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="team">
+			<div class="container">
+				<h3>Meet Our Team</h3>
+				<div class="col-md-4 team-grid">
+					<img src="images/3.png" alt=" " class="img-responsive" />
+					<h4>Priston<span>Chief Engineer</span></h4>
+					<p>Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor.</p>
+					<div class="social">
+						<ul>
+							<li><a href="#" class="facebook"> </a></li>
+							<li><a href="#" class="twitter"> </a></li>
+							<li><a href="#" class="g"> </a></li>
+							<li><a href="#" class="in"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 team-grid">
+					<img src="images/5.png" alt=" " class="img-responsive" />
+					<h4>John Franklin<span>Chief Engineer</span></h4>
+					<p>Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor.</p>
+					<div class="social">
+						<ul>
+							<li><a href="#" class="facebook"> </a></li>
+							<li><a href="#" class="twitter"> </a></li>
+							<li><a href="#" class="g"> </a></li>
+							<li><a href="#" class="in"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 team-grid">
+					<img src="images/4.png" alt=" " class="img-responsive" />
+					<h4>Lara Mark<span>Chief Engineer</span></h4>
+					<p>Itaque earum rerum hic tenetur a sapiente delectus voluptas assumenda est, omnis dolor.</p>
+					<div class="social">
+						<ul>
+							<li><a href="#" class="facebook"> </a></li>
+							<li><a href="#" class="twitter"> </a></li>
+							<li><a href="#" class="g"> </a></li>
+							<li><a href="#" class="in"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //about -->
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >免费网站模板</a></div>
+<!-- services -->
+	<div id="services" class="services">
+		<div class="container">
+			<div class="services-grids">
+				<div class="col-md-3 services-grid">
+					<div class="services-grd">
+						<div class="gear">
+							<span> </span>
+						</div>
+							<h3>eligendi cumque nihil impedit</h3>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus maiores alias consequatur aut 
+								perferendis doloribus asperiores repellat.</p>
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-top">Read More</a>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3 services-grid">
+					<div class="services-grd">
+						<div class="men">
+							<span> </span>
+						</div>
+							<h3>repellat cumque nihil impedit</h3>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus maiores alias consequatur aut 
+								perferendis doloribus asperiores repellat.</p>
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-top">Read More</a>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3 services-grid">
+					<div class="services-grd">
+						<div class="rupee">
+							<span> </span>
+						</div>
+							<h3>sapiente cumque nihil impedit</h3>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus maiores alias consequatur aut 
+								perferendis doloribus asperiores repellat.</p>
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-top">Read More</a>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3 services-grid">
+					<div class="services-grd">
+						<div class="truck">
+							<span> </span>
+						</div>
+							<h3>maiores cumque nihil impedit</h3>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus maiores alias consequatur aut 
+								perferendis doloribus asperiores repellat.</p>
+							<div class="more">
+								<a href="#" class="hvr-bounce-to-top">Read More</a>
+							</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="our">
+		<div class="container">
+			<div class="our-main">
+				<div class="our-text">
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+						<h4>Integer viverra ut libero eget convallis.</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+						<h4>Quisque venenatis volutpat ipsum at</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+						<h4>Vivamus convallis a felis ut sodales</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="our-text">
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+						<h4>molestias excepturi occaecati cupiditate</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+						<h4>Nam porta erat vitae neque imperdiet</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+						<h4>Mauris efficitur enim in nunc eleifend</h4>
+						<p>Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //services -->
+<!-- projects -->
+	<div id="projects" class="projects">
+		<div class="container">
+			<h3>Recent Projects</h3>
+			<div class="project-grids">
+				<ul id="flexiselDemo1">			
+					<li>
+						<div class="project-grid">
+							<img src="images/2.jpg" alt=" " class="img-responsive" />
+							<div class="project-grid-text">
+								<h4>facilis expedita distinctio</h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="project-grid">
+							<img src="images/3.jpg" alt=" " class="img-responsive" />
+							<div class="project-grid-text">
+								<h4>facilis expedita distinctio</h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="project-grid">
+							<img src="images/4.jpg" alt=" " class="img-responsive" />
+							<div class="project-grid-text">
+								<h4>facilis expedita distinctio</h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="project-grid">
+							<img src="images/6.jpg" alt=" " class="img-responsive" />
+							<div class="project-grid-text">
+								<h4>facilis expedita distinctio</h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<script type="text/javascript">
+							$(window).load(function() {
+								$("#flexiselDemo1").flexisel({
+									visibleItems: 4,
+									animationSpeed: 1000,
+									autoPlay: true,
+									autoPlaySpeed: 3000,    		
+									pauseOnHover: true,
+									enableResponsiveBreakpoints: true,
+									responsiveBreakpoints: { 
+										portrait: { 
+											changePoint:480,
+											visibleItems: 1
+										}, 
+										landscape: { 
+											changePoint:640,
+											visibleItems:3
+										},
+										tablet: { 
+											changePoint:768,
+											visibleItems: 3
+										}
+									}
+								});
+								
+							});
+					</script>
+					<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+			</div>
+		</div>
+	</div>
+<!-- //projects -->
+<!-- products -->
+	<div id="products" class="products">
+		<div class="container">
+			<h3>Products</h3>
+			<div class="product-grids">
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/13.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/13.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 product-grid">	
+					<div class="product-grd">
+						<a href="images/8.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/8.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/9.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/9.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="product-grids">
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/10.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/10.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 product-grid">	
+					<div class="product-grd">
+						<a href="images/11.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/11.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 product-grid">
+					<div class="product-grd">
+						<a href="images/12.jpg" class="b-link-stripe b-animate-go1   swipebox"  title="">
+							<img src="images/12.jpg" alt=" " class="img-responsive" />
+						</a>
+						<div class="project-grid-text1">
+							<h4> voluptatibus maiores alias perferendis</h4>
+							<p> Itaque earum rerum hic tenetur a sapiente delectus, 
+								ut aut reiciendis voluptatibus .</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+					<link rel="stylesheet" href="css/swipebox.css">
+						<script src="js/jquery.swipebox.min.js"></script> 
+							<script type="text/javascript">
+								jQuery(function($) {
+									$(".swipebox").swipebox();
+								});
+							</script>
+			</div>
+		</div>
+	</div>
+<!-- //products -->
+<!-- contact -->
+	<div id="contact" class="contact">
+		<div class="container">
+			<h3>Contact</h3>
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.1973950112197!2d90.39410240000001!3d23.7403393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bfe09f2fc9%3A0x1da49bc0abfd4f7a!2sShahbagh%2C+Dhaka%2C+Bangladesh!5e0!3m2!1sen!2sin!4v1432554662723" frameborder="0" style="border:0"></iframe>
+				<div class="map-color">
+					<div class="contact-info">
+						<h4>Contact Info</h4>
+						<p>252, Dolors Road, MKM Tower,
+							<span>Velter Road, Delhi</span>
+							Phone Number: 01918-009393</p>
+						<form>
+							<input type="text" value="Name" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Name';}" required="">
+							<input type="email" value="Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Email';}" required="">
+							<input type="text" value="Subject" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Subject';}" required="">
+							<textarea type="text"  onfocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+							<input type="submit" value="Send Message">
+						</form>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //contact -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-6 footer-grid-left">
+					<h3>Welcome</h3>
+					<img src="images/14.jpg" alt=" " class="img-responsive" />
+					<h4>Nam libero tempore, cum soluta nobis est eligendi optio 
+						cumque nihil impedit quo minus id quod maxime placeat 
+						facere possimus</h4>
+					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum 
+						necessitatibus saepe eveniet ut et voluptates repudiandae sint et 
+						molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente 
+						delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut 
+						perferendis doloribus asperiores repellat.</p>
+					<div class="maiores">
+						<ul>
+							<li><a href="#" class="f"> </a></li>
+							<li><a href="#" class="t"> </a></li>
+							<li><a href="#" class="g1"> </a></li>
+							<li><a href="#" class="in1"> </a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 footer-grid-right">
+					<h3>Overview</h3>
+					<p>Itaque earum rerum hic tenetur a sapiente 
+						delectus, ut aut reiciendis  optio cumque nihil impedit quo 
+						minus id quod maxime placeat facere possimus, omnis voluptas 
+						assumenda est, omnis dolor repellendus voluptatibus maiores alias 
+						consequatur aut perferendis doloribus asperiores repellat.</p>
+					<div class="footer-grid-right-grids">
+						<div class="col-md-6 footer-grid-right-grid">
+							<img src="images/10.jpg" alt=" " class="img-responsive" />
+							<h4>voluptatibus maiores alias</h4>
+						</div>
+						<div class="col-md-6 footer-grid-right-grid">
+							<img src="images/11.jpg" alt=" " class="img-responsive" />
+							<h4>omnis dolor repellendus</h4>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="footer-grid-right-grids">
+						<div class="col-md-6 footer-grid-right-grid">
+							<img src="images/12.jpg" alt=" " class="img-responsive" />
+							<h4>asperiores maiores alias</h4>
+						</div>
+						<div class="col-md-6 footer-grid-right-grid">
+							<img src="images/13.jpg" alt=" " class="img-responsive" />
+							<h4>repellendus dolor repellendus</h4>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+		</div>
+	</div>
+<!-- //footer -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>
