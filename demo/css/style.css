@@ -264,7 +264,7 @@ body a:hover{
   padding: 4em 0;
 }
 .welcome-company-grid-right h3,.about-grid-left h3,.about-grid-right h3,.testimonials h3,.team h3,
-.projects h3,.products h3,.contact h3{
+.projects h3,.products h3,.contact h3, .our h3{
 	font-size:2.5em;
 	color:#168EEA;
 	margin: 0 0 1em;
@@ -282,7 +282,7 @@ body a:hover{
 .about {
   background-color: #f4f7f9;
 }
-.about-grid-left h3,.about-grid-right h3,.products h3,.contact h3{
+.about-grid-left h3,.about-grid-right h3,.products h3,.contact h3, .our h3{
 	margin:0 0 2em;
 }
 .about-grids {
@@ -885,7 +885,7 @@ position:relative;
 	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3 {
 		font-size: 2.3em;
 	}
-	.about-grid-left h3, .about-grid-right h3, .products h3, .contact h3,.team h3{
+	.about-grid-left h3, .about-grid-right h3, .products h3, .contact h3,.team h3, .our h3{
 	  margin: 0 0 1.5em;
 	}
 	.nbs-flexisel-nav-left,.nbs-flexisel-nav-right {
@@ -902,7 +902,7 @@ position:relative;
 	.banner-bottom-nav ul li a {
 		font-size: 16px;
 	}
-	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3 {
+	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3, .our h3 {
 	  font-size: 2em;
 	}
 	.welcome-company-grid-right h3{
@@ -1034,7 +1034,7 @@ position:relative;
 	.welcome-company-grid-left,.about-grid-left {
 	  margin-bottom: 2em;
 	}
-	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3 {
+	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3, .our h3 {
 	  font-size: 1.8em;
 	}
 	.about-grid-left img {
@@ -1200,7 +1200,7 @@ position:relative;
 	  float: left;
 	  margin-right: .5em;
 	}
-	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3 {
+	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3 .our h3 {
 	  font-size: 1.5em;
 	}
 	.about-grid-lft {
@@ -1316,7 +1316,7 @@ position:relative;
 	.welcome-company, .services, .footer, .products, .projects, .our {
 	  padding: 2em 0;
 	}
-	.about-grid-left h3, .about-grid-right h3, .products h3, .contact h3, .team h3 {
+	.about-grid-left h3, .about-grid-right h3, .products h3, .contact h3, .team h3, .our h3 {
 	  margin: 0 0 1em;
 	}
 	.about-grid-rgt {
@@ -1506,7 +1506,7 @@ position:relative;
 	.welcome-company-grid-left, .about-grid-left {
 	  margin-bottom: 1em;
 	}
-	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3 {
+	.welcome-company-grid-right h3, .about-grid-left h3, .about-grid-right h3, .testimonials h3, .team h3, .projects h3, .products h3, .contact h3, .our h3 {
 	  font-size: 1.1em;
 	}
 	.welcome-company-grid-left,.welcome-company-grid-right,.about-grid-left,.about-grid-right,.services-grid,
