@@ -1,94 +1,60 @@
-ï»¿<?php
+<?php
     require ( 'init.inc.php' );
     require ( __CLASS_PATH . 'page_list.class.php' );
     require("./count/redhat.php");
 	$plist = new PageList();
 	
 	//------------------------------------
-	//Õ²
+	//½ÓÊÕ²ÎÊý
 	//------------------------------------
     $menuid = intval($_GET["menuid"]);
 
 	//------------------------------------
-	//È¡
+	//È¡³öÊý¾Ý£­£­¹«Ë¾¼ò½é
 	//------------------------------------
 	$plist->RowName = "company";
     $plist->Execute("select * from `{$tablepre}article` where `article_id`=102");
 	$plist->TplParse();
 	
 	//------------------------------------
-	//È¡
+	//È¡³öÊý¾Ý£­£­ÁªÏµ·½Ê½
 	//------------------------------------
-	$plist->RowName = "news";
-    $plist->Execute("select * from `{$tablepre}news` where `confirm` = 1 order by `posttime` desc limit 0,105");
+	$plist->RowName = "lianxi";
+    $plist->Execute("select * from `{$tablepre}article` where `article_id`=103");
 	$plist->TplParse();
-	
+
 	//------------------------------------
-	//È¡Æ·
+	//È¡³öÊý¾Ý--ÐÐÒµ¶¯Ì¬
+	//------------------------------------
+	$plist->RowName = "info";
+    $plist->Execute("select * from `{$tablepre}news` where classid = 208 and `confirm` = 1 order by `posttime` desc limit 0,10");
+	$plist->TplParse();
+
+	//------------------------------------
+	//È¡³öÊý¾Ý--³É¹¦°¸Àý
+	//------------------------------------
+	$plist->RowName = "guide";
+    $plist->Execute("select * from `{$tablepre}news` where classid = 206 and `confirm` = 1 order by `posttime` desc limit 0,10");
+	$plist->TplParse();
+
+	//------------------------------------
+	//È¡³öÊý¾Ý--ÍÆ¼ö²úÆ·
 	//------------------------------------
 	$plist->RowName = "products";
     $plist->Execute("select * from `{$tablepre}products` where `products_istop` = 1 order by `products_pubtime`");
-	$plist->TplParse();
+  $plist->TplParse();
 	
-	$tpl->assign("cat_tree", get_categories_tree(0));
+	
 	$tpl->assign("menuid",$menuid);
 	$tpl->assign("count",$count);
     $tpl->display("index.html");
 	
 	
 	/**
- * èŽ·å¾—æŒ‡å®šåˆ†ç±»åŒçº§çš„æ‰€æœ‰åˆ†ç±»ä»¥åŠè¯¥åˆ†ç±»ä¸‹çš„å­åˆ†ç±»
+ * »ñµÃÖ¸¶¨·ÖÀàÍ¬¼¶µÄËùÓÐ·ÖÀàÒÔ¼°¸Ã·ÖÀàÏÂµÄ×Ó·ÖÀà
  *
  * @access  public
- * @param   integer     $cat_id     åˆ†ç±»ç¼–å·
+ * @param   integer     $cat_id     ·ÖÀà±àºÅ
  * @return  array
  */
-function get_categories_tree($cat_id = 0)
-{
-	global $db, $tablepre;
-    if ($cat_id > 0)
-    {
-        $sql = "SELECT parent_id FROM  {$tablepre}products_class WHERE id = '$cat_id'";
-        $parent_id = $db->getOne($sql);
-    }
-    else
-    {
-        $parent_id = 0;
-    }
-
-    /*
-     åˆ¤æ–­å½“å‰åˆ†ç±»ä¸­å…¨æ˜¯æ˜¯å¦æ˜¯åº•çº§åˆ†ç±»ï¼Œ
-     å¦‚æžœæ˜¯å–å‡ºåº•çº§åˆ†ç±»ä¸Šçº§åˆ†ç±»ï¼Œ
-     å¦‚æžœä¸æ˜¯å–å½“å‰åˆ†ç±»åŠå…¶ä¸‹çš„å­åˆ†ç±»0
-    */
-    $sql = "SELECT count(*) FROM `{$tablepre}products_class` WHERE parent_id = '$cat_id' ";
-    if ($GLOBALS['db']->getOne($sql) || $parent_id == 0)
-    {
-        /* èŽ·å–å½“å‰åˆ†ç±»åŠå…¶å­åˆ†ç±» */
-        $sql = 'SELECT id, class_name_en, sort_order, parent_id '.
-                 "FROM `{$tablepre}products_class` " .
-                "WHERE parent_id = '$cat_id' ORDER BY sort_order ASC";
-		$result = $db->query($sql);
-		
-
-		//$res = $GLOBALS['db']->getAll($sql);
-		
-		$row = array();
-		while ($row = mysql_fetch_assoc($result))
-		//foreach ($row AS $res)
-		{
-			$cater_id  = $row['id'];
-			$res[$row['id']] = $row;
-			
-			$sql = "SELECT count(*) from `{$tablepre}products_class` where parent_id = '$cater_id' ";
-			if ($GLOBALS['db']->getOne($sql))
-			{
-			   $res[$row['id']]['child'] =get_categories_tree($cater_id);
-			   
-			   }
-		}
-    }
-    
-    return $res;
-}
 ?>

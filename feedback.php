@@ -1,26 +1,41 @@
-ï»¿<?php
+<?php
     require ( 'init.inc.php' );
     require ( __CLASS_PATH . 'page_list.class.php' );
     require("./count/redhat.php");
 	$plist = new PageList();
 
     $act = $_POST['act'];
+	
+    //------------------------------------
+	//È¡³öÊı¾İ£­£­ÁªÏµ·½Ê½
+	//------------------------------------
+	$plist->RowName = "lianxi";
+    $plist->Execute("select * from `{$tablepre}article` where `article_id`=103");
+	$plist->TplParse();
+
+	
+	//------------------------------------
+	//È¡³öÊı¾İ--×îĞÂÏûÏ¢
+	//------------------------------------
+	$plist->RowName = "gginfo";
+    $plist->Execute("select * from `{$tablepre}article` where `article_id`=104");
+	$plist->TplParse();
 
     
     $cname = 'Message';
     $tablename = "`{$tablepre}reply`";
 
     if($gbookopen==1){
-        AlertMsg("Sorry! The Feedback was close!",1);   //æ˜¯å¦å¼€æˆ·ç•™è¨€åŠŸèƒ½
+        AlertMsg("¶Ô²»Æğ£¬ÍøÕ¾ÁôÑÔ¹¦ÄÜÒÑ¹Ø±Õ!",1);   //ÊÇ·ñ¿ª»§ÁôÑÔ¹¦ÄÜ
     }
-    //ipè®¿é—®é™åˆ¶
+    //ip·ÃÎÊÏŞÖÆ
     if(!empty($gbook_limit_ip)){
         $guestip = GetIP();
         //echo $guestip; exit;
         $arr_ip = explode('||',$gbook_limit_ip);
         foreach($arr_ip as $val){
             if($val==$guestip){
-                AlertMsg("Sorry,you can't see it!",1);
+                AlertMsg("¶Ô²»Æğ£¬ÄãÒÑ±»ÏŞÖÆ·ÃÎÊ¸ÃÒ³Ãæ!",0);
                 break;
             }
         }
@@ -36,7 +51,7 @@
         $pubtime = date("Y-m-d H:i:s");
 
         if(empty($username)||empty($phone)||empty($email)||empty($address)||empty($content)){
-            AlertMsg("Please writer the info!",0);
+            AlertMsg("ÇëÌîĞ´±ØÒªĞÅÏ¢!",1);
         }
         $fields_arr = array(
           //  "stype" => $gbook_type,
@@ -48,11 +63,11 @@
             "pubtime" => $pubtime,
             "status" => 1,
         );
-        $db->insertData($tablename,$fields_arr);  //æ’å…¥æ•°æ®
-        AlertMsg('You have successfully submitted a message, thank you.', 'feedback.php');
+        $db->insertData($tablename,$fields_arr);  //²åÈëÊı¾İ
+        AlertMsg('ÄúÒÑ¾­³É¹¦Ìá½»ĞÅÏ¢£¬Ğ»Ğ»', 'feedback.php');
     }
 
-    //ç•™è¨€ç±»åˆ«
+    //ÁôÑÔÀà±ğ
   //  $gbook_type = "";
 //    $arry_type = explode('||',$gbook_sort);
 //    if(is_array($arry_type)){
@@ -61,7 +76,7 @@
 //        }
 //    }
 //
-//    $banner_img = '1-4.swf';  //bannerå›¾ç‰‡
+//    $banner_img = '1-4.swf';  //bannerÍ¼Æ¬
 //    
 //    $page_url = 'contact.php';
    // $left_nav = GetLeftNav($page_url,2,$article_id);

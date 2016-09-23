@@ -1,85 +1,143 @@
-<{include file="head.html"}>
- <!--头部结束-->
-   <div id="ind_center">
-     <div class="left">
-	 <{include file="left.html"}>
-	 </div>
-	 
-     <div class="right">
-       <div id="notice"><p><MARQUEE scrollAmount=1 scrollDelay=4 width=610 align="left" onMouseOver="this.stop()" onMouseOut="this.start()">
-		<{section name=new loop=$news}> 		           
-<a href="news_detail.php?menuid=2&classid=<{$news[new].classid}>&id=<{$news[new].id}>" class="top_new"><font color='#FF0000'>&bull;&nbsp;<{$news[new].news_title_en|dodi_msubstr:0:15}></font>&nbsp;&nbsp;</a>
-		 <{/section}>
-                    </MARQUEE></p></div>
-     
-      <div id="cl"></div>
-      <div id="gd_pro_l"><img src="images/gd_p1.jpg" width="14" height="14" /><span>PRODUCTS</span></div>
-      <div id="gd_pro_r"><a href="products.php"><img src="images/more.jpg" width="49" height="16" border="0" /></a></div>
-      <div id="cl"></div>
-      <div id="line_1"></div>
-      <div id="gd_pro">
+<{include file="header.html"}>
 
-				<!--下面是向左滚动代码-->
 
-<div id="colee_left" style="overflow:hidden;width:730px;">
-<table cellpadding="0" cellspacing="0" border="0">
-<tr><td id="colee_left1" valign="top" align="center">
-<table cellpadding="2" cellspacing="0" border="0">
-<tr align="center">
-<{section name=p loop=$products}>
-<td><div class="pm12"><a href="products_detail.php?menuid=3&id=<{$products[p].id}>&classid=<{$products[p].products_classid}>"><img src="<{$products[p].products_thumb|correct_path|getThumb:120:120}>" alt="<{$products[p].products_title}>" border="0"/></a></div><div class="pm122"><{$products[p].products_title}></div></td>
-<{/section}>
-</tr>
-</table>
-</td>
-<td id="colee_left2" valign="top"></td>
-</tr>
-</table>
+<!-- welcome-company -->
+	<div class="welcome-company">
+		<div class="container">
+			<div class="welcome-company-grids">
+				<div class="col-md-4 welcome-company-grid-left">
+					<div class="company-grids">
+						<img src="images/1.jpg" alt=" " class="img-responsive"/>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="col-md-8 welcome-company-grid-right">
+					<h3>广东电缆行业龙头企业  广东电缆厂有限公司</h3>
+					<p><{$company[0].article_content|correct_path}></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //welcome-company -->
+<!-- services -->
+
+	<div class="our">
+		<div class="container">
+			<h3>成功案例</h3>
+			<div class="our-main">
+				<div class="our-text">
+					<{section name=new loop=$info}>
+					<div class="col-md-4 our-left">
+						<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+						<h4><a href="news_detail.php?menuid=2&classid=<{$info[new].classid}>&id=<{$info[new].id}>" class="top_new"><{$info[new].news_title|dodi_msubstr:0:18}></a></h4>
+					</div>
+					<{/section}>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //services -->
+<!-- projects -->
+	<div id="projects" class="projects">
+		<div class="container">
+			<h3>新品推荐</h3>
+			<div class="project-grids">
+				<ul id="flexiselDemo1">
+					<{section name=p loop=$products}>
+					<li>
+						<div class="project-grid">
+							<a href="products_detail.php?menuid=3&id=<{$products[p].id}>&classid=<{$products[p].products_classid}>">
+								<img src="<{$products[p].products_thumb|correct_path|getThumb:120:120}>" alt=" " class="img-responsive" />
+							</a>
+							<div class="project-grid-text">
+								<h4><{$products[p].products_title}></h4>
+								<p>20 June 2015, by <a href="#">admin</a>, in <a href="#">Featured.</a></p>
+							</div>
+						</div>
+					</li>
+					<{/section}>
+
+				</ul>
+				<script type="text/javascript">
+							$(window).load(function() {
+								$("#flexiselDemo1").flexisel({
+									visibleItems: 4,
+									animationSpeed: 1000,
+									autoPlay: true,
+									autoPlaySpeed: 3000,    		
+									pauseOnHover: true,
+									enableResponsiveBreakpoints: true,
+									responsiveBreakpoints: { 
+										portrait: { 
+											changePoint:480,
+											visibleItems: 1
+										}, 
+										landscape: { 
+											changePoint:640,
+											visibleItems:3
+										},
+										tablet: { 
+											changePoint:768,
+											visibleItems: 3
+										}
+									}
+								});
+								
+							});
+					</script>
+					<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+			</div>
+		</div>
+	</div>
+<!-- //projects -->
+<!-- news -->
+<div class="our">
+	<div class="container">
+		<h3>行业动态</h3>
+		<div class="our-main">
+			<div class="our-text">
+
+				<{section name=new loop=$guide}>
+				<div class="col-md-4 our-left">
+					<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+					<h4><a href="news_detail.php?menuid=2&classid=<{$info[new].classid}>&id=<{$info[new].id}>" class="top_new"><{$guide[new].news_title|dodi_msubstr:0:18}></a></h4>
+				</div>
+				<{/section}>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
 </div>
-<script>
-//使用div时，请保证colee_left2与colee_left1是在同一行上.
-var speed=30//速度数值越大速度越慢
-var colee_left2=document.getElementById("colee_left2");
-var colee_left1=document.getElementById("colee_left1");
-var colee_left=document.getElementById("colee_left");
-colee_left2.innerHTML=colee_left1.innerHTML
-function Marquee3(){
-if(colee_left2.offsetWidth-colee_left.scrollLeft<=0)//offsetWidth 是对象的可见宽度
-colee_left.scrollLeft-=colee_left1.offsetWidth//scrollWidth 是对象的实际内容的宽，不包边线宽度
-else{
-colee_left.scrollLeft++
-}
-}
-var MyMar3=setInterval(Marquee3,speed)
-colee_left.onmouseover=function() {clearInterval(MyMar3)}
-colee_left.onmouseout=function() {MyMar3=setInterval(Marquee3,speed)}
-</script>
-
-<!--向左滚动代码结束-->
-
-
-</div>
-
-	  
-      
-      <div id="cl"></div>
-      <div id="gd_pro_l"><img src="images/gd_p1.jpg" width="14" height="14" /><span>COMPANY PROFILE</span></div>
-      <div id="gd_pro_r"></div>
-      <div id="cl"></div>
-      <div id="line_1"></div>
-      <div id="gd_pro"><div class="con_a">			
-	<{$company[0].article_content_en|correct_path}>
-</div></div>
-      
-    </div>
-    <div id="cl"></div>
-
-   </div>
-   
-   <div id="ind_c_bot"><img src="images/gan_11.jpg" width="988" height="3" /></div>
-      <div id="cl"></div>
+<!-- //products -->
+<!-- contact -->
+	<div id="contact" class="contact">
+		<div class="container">
+			<h3>Contact</h3>
+			<div class="map">
+				<div style="min-height: 360px">
+					<img src="http://120.26.202.243:8080/gdcwl/images/map.jpg" style="width: 100%">
+				</div>
+				<div class="map-color" style="min-height: 360px">
+					<div class="contact-info">
+						<h4>联系我们</h4>
+						<p>佛山南海区大沥凤池装饰材料市场B2-7</p>
+						<p>销售部联系人:郭文升经理</p>
+						<p>手机:18688801051</p>
+						<p>传真:0757-86709783</p>
+						<p>总机:0757-86773640 转2666郭经理</p>
+						<p>E-mail:  gddlc@139.com</p>
+						<p>QQ：  527210457</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- //contact -->
 
 
-	 <{include file="footer.html"}>
-
-
+<{include file="footer.html"}>

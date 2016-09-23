@@ -1,17 +1,17 @@
-ï»¿<?php
+<?php
     require ( 'init.inc.php' );
     require ( __CLASS_PATH . 'page_list.class.php' );
     require("./count/redhat.php");
 	$plist = new PageList();
 	
 	//------------------------------------
-	//Õ²
+	//½ÓÊÕÊý¾Ý
 	//------------------------------------
     $menuid = intval($_GET["menuid"]);
 	$id = intval($_GET["id"]);
 
 	//------------------------------------
-	//È¡
+	//È¡¶ÁÊý¾Ý
 	//------------------------------------
 	$plist->RowName = "company";
     $plist->Execute("select * from `{$tablepre}article` where `article_id`=101");
@@ -21,8 +21,23 @@
     $plist->Execute("select * from `{$tablepre}title` where `id`={$id}");
 	$plist->TplParse();
 	
+    //------------------------------------
+	//È¡³öÊý¾Ý£­£­ÁªÏµ·½Ê½
 	//------------------------------------
-	//È¡Æ·
+	$plist->RowName = "lianxi";
+    $plist->Execute("select * from `{$tablepre}article` where `article_id`=103");
+	$plist->TplParse();
+
+	
+	//------------------------------------
+	//È¡³öÊý¾Ý--×îÐÂÏûÏ¢
+	//------------------------------------
+	$plist->RowName = "gginfo";
+    $plist->Execute("select * from `{$tablepre}article` where `article_id`=104");
+	$plist->TplParse();
+	
+	//------------------------------------
+	//ÅÐ¶ÏÀà
 	//------------------------------------
 	$plist->RowName = "class";
     $plist->Execute("select * from `{$tablepre}products_class`order by `sort_order`");

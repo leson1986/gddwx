@@ -5,15 +5,14 @@
 	$plist = new PageList();
 	
 	//------------------------------------
-	//½ÓÊÕ²ÎÊý
+	//æŽ¥æ”¶æ•°æ®
 	//------------------------------------
     $menuid = intval($_GET["menuid"]);
-	$classid = intval($_GET["classid"]);
 	$id = intval($_GET["id"]);
 
 	
     //------------------------------------
-	//È¡³öÊý¾Ý£­£­ÁªÏµ·½Ê½
+	//å–å‡ºæ•°æ®ï¼ï¼è”ç³»æ–¹å¼
 	//------------------------------------
 	$plist->RowName = "lianxi";
     $plist->Execute("select * from `{$tablepre}article` where `article_id`=103");
@@ -21,36 +20,21 @@
 
 	
 	//------------------------------------
-	//È¡³öÊý¾Ý--×îÐÂÏûÏ¢
+	//å–å‡ºæ•°æ®--æœ€æ–°æ¶ˆæ¯
 	//------------------------------------
 	$plist->RowName = "gginfo";
     $plist->Execute("select * from `{$tablepre}article` where `article_id`=104");
 	$plist->TplParse();
-
-	//------------------------------------
-	//È¡³öÊý¾Ý
-	//------------------------------------
-	$plist->RowName = "news";
-	$plist->SetPageSize(20);
-	$plist->SetUrlParam(array('id','menuid'));
-    $plist->Execute("select * from `{$tablepre}news` where `id`={$id}");
-	$plist->TplParse();
 	
-	
-	$plist->RowName = "title";
-	$plist->Execute("select * from `{$tablepre}title` where `id` = {$classid}");
-	$plist->TplParse();
-
 	//------------------------------------
-	//È¡³ö²úÆ·Àà±ð
+	//åˆ¤æ–­ç±»
 	//------------------------------------
 	$plist->RowName = "class";
     $plist->Execute("select * from `{$tablepre}products_class`order by `sort_order`");
 	$plist->TplParse();
-		
+	
 	$tpl->assign("menuid",$menuid);
-	$tpl->assign("classid",$classid);
 	$tpl->assign("count",$count);
 	$tpl->assign("id",$id);
-    $tpl->display("newsDetail.html");
+    $tpl->display("pay.html");
 ?>
