@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Automation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- js -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- //js -->
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+</head>
+
+<body>
+<!-- banner -->
+<div class="banner">
+	<div class="container">
+		<div class="logo">
+			<a href="index.html"><span>Auto</span>mation</a>
+		</div>
+		<div class="banner-info">
+			<h1>The premier industrial manufaturer & exporter
+				stebility & emphasis on client advocacy!</h1>
+			<div class="more exporter">
+				<a href="#" class="hvr-bounce-to-top">Read More</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //banner -->
+<!-- sticky-nav -->
+<div class="banner-bottom">
+	<div class="container">
+		<div class="fixed-header">
+			<div class="banner-bottom-nav">
+				<span class="menu"><img src="images/menu.png" alt=" "/></span>
+				<div class="home-logo">
+					<a href="index.html"> </a>
+				</div>
+				<nav class="cl-effect-1">
+					<ul class="nav1">
+						<li><a class="scroll" href="#about">首页</a></li>
+						<li><a class="scroll" href="#about">企业概况</a></li>
+						<li><a class="scroll" href="#services">新闻中心</a></li>
+						<li><a class="scroll" href="#projects">产品展示</a></li>
+						<li><a class="scroll" href="#products">工程业绩</a></li>
+						<li><a class="scroll" href="#contact">联系我们</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- script for menu -->
+			<script>
+				$( "span.menu" ).click(function() {
+					$( "ul.nav1" ).slideToggle( 300, function() {
+						// Animation complete.
+					});
+				});
+			</script>
+			<!-- //script for menu -->
+
+			<!-- script-for sticky-nav -->
+			<script>
+				$(document).ready(function() {
+					var navoffeset=$(".banner-bottom").offset().top;
+					$(window).scroll(function(){
+						var scrollpos=$(window).scrollTop();
+						if(scrollpos >=navoffeset){
+							$(".banner-bottom").addClass("fixed");
+						}else{
+							$(".banner-bottom").removeClass("fixed");
+						}
+					});
+
+				});
+			</script>
+			<!-- //script-for sticky-nav -->
+		</div>
+		<!--<div class="search-sub">
+			 <form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Type your text here...">
+				</div>
+				<button type="submit" class="btn btn-default">Search</button>
+			  </form>
+		</div>-->
+		<div class="clearfix"> </div>
+	</div>
+</div>
+<!-- //sticky-nav -->
+
+<!-- news -->
+
+<div class="our">
+	<div class="container">
+		<div class="our-main">
+			<div class="our-text">
+				<!--<div class="col-md-10 our-left">
+					<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+					<h4>广东电缆厂浅谈国标电缆与非标电缆的区别</h4>
+				</div>-->
+				<div class="col-md-3 categories-grid">
+					<div class="grid-categories">
+						<h4>产品展示</h4>
+						<ul class="popular ">
+							<li><a href="#"><i class="glyphicon glyphicon-ok"> </i>主要产品</a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-ok"> </i>YJV 高低压辐照交联电力电缆系列</a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-ok"> </i>YJV 高低压辐照交联电力电缆系列</a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-ok"> </i>YJV 高低压辐照交联电力电缆系列</a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-ok"> </i>YJV 高低压辐照交联电力电缆系列</a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-ok"> </i>YJV 高低压辐照交联电力电缆系列</a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-ok"> </i>YJV 高低压辐照交联电力电缆系列</a></li>
+							<li><a href="#"><i class="glyphicon glyphicon-ok"> </i>YJV 高低压辐照交联电力电缆系列</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-8 ">
+					<div class=" single-grid">
+						<img class="img-responsive" src="images/1.jpg" alt="" />
+						<div class="lone-line">
+							<h4>YJV 高低压辐照交联电力电缆系列</h4>
+							<div class="cal">
+								<ul>
+									<li><span ><i class="glyphicon glyphicon-calendar"> </i>22.08.2014</span></li>
+								</ul>
+							</div>
+							<p>
+								高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列高低压辐照交联电力电缆系列
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //services -->
+
+<!-- footer -->
+<div class="footer-bottom">
+	<div class="container">
+		<p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+	</div>
+</div>
+<!-- //footer -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().UItoTop({ easingType: 'easeOutQuart' });
+
+	});
+</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>
